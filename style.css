@@ -1,0 +1,33 @@
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fefbd8;
+}
+img {
+  width: 100px;
+}
+.name {
+  margin-top: 15px;
+  margin-left: 15px;
+  width: 125px;
+}
+.table_block {
+  display: inline-block;
+  position: static;
+  background-color: #d5f4e6;
+  width: 300px;
+  border-style: dashed;
+}
+form {
+  font-size: 15px;
+}
+tr, td {
+  padding: 5px;
+  text-align: center;
+}
+.list {
+  margin-top: 100px;
+}
+
+li {
+  padding-bottom: 10px;
+}
