@@ -1,33 +1,32 @@
-html {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #fefbd8;
-}
-img {
-  width: 100px;
-}
-.name {
-  margin-top: 15px;
-  margin-left: 15px;
-  width: 125px;
-}
-.table_block {
-  display: inline-block;
-  position: static;
-  background-color: #d5f4e6;
-  width: 300px;
-  border-style: dashed;
-}
-form {
-  font-size: 15px;
-}
-tr, td {
-  padding: 5px;
-  text-align: center;
-}
-.list {
-  margin-top: 100px;
+#title {
+  background: rgba(0, 0, 0, 0.7) url(film.jpg);;
 }
 
-li {
-  padding-bottom: 10px;
+.container-fluid {
+  padding: 7% 15%;
+}
+
+.navbar-brand {
+  font-family: Ubuntu, sans-serif;
+  font-size: 2.5rem;
+}
+
+h1 {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 1.5;
+
+}
+
+.first {
+  background: rgb(253,29,29);
+background: linear-gradient(90deg, rgba(253,29,29,1) 24%, rgba(253,96,48,1) 38%, rgba(253,98,48,1) 48%, rgba(253,128,56,1) 74%, rgba(252,176,69,1) 100%, rgba(131,58,180,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#iphone {
+  width: 340px;
 }
