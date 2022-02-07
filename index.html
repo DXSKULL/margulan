@@ -8,15 +8,17 @@
   <title>Index</title>
 </head>
 <body>
-  <form>
-1st Number : <input type="text" id="firstNumber" /><br>
-2nd Number: <input type="text" id="secondNumber" /><br>
-<input type="button" onClick="multiplyBy()" Value="Multiply" />
-<input type="button" onClick="divideBy()" Value="Divide" />
-</form>
-<p>The Result is : <br>
-<span id = "result"></span>
-</p>
+  <form name='registration' id="form1">
+  <ul>
+  <li><label for="username">Username:</label></li>
+  <li><input type="text" name="username" size="12" class="input" required></li>
+  <li><label for="pass">Password:</label></li>
+  <li><input type="password" name="pass" size="12" id="password" required></li>
+  <li><label for="confirm_pass">Confirm Password:</label></li>
+  <li><input type="password" name="confirm_pass" size="50" id="confirm_password" required></li> <br>
+  <li><button type="submit" form="form1" value="Submit" onclick="myFunction()" class="button">Register</button></li>
+  </ul>
+  </form>
 <script src="index.js" charset="utf-8"></script>
 </body>
 </html>
