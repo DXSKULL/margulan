@@ -1,32 +1,26 @@
-var password = document.getElementById("password")
-  , confirm_password = document.getElementById("confirm_password");
+const paragraph = document.querySelector('p');
+paragraph.innerHTML = paragraph.innerText
+.split(' ')
+.map(word => word.length > 8 ? `<span style = "background-color: yellow">${word}</span>` : word)
+.join(' ');
 
-function validatePassword(){
-  if(password.value != confirm_password.value) {
-    confirm_password.setCustomValidity("Passwords Don't Match");
-    
-  } else {
-    confirm_password.setCustomValidity('');
-  }
-}
+const link = document.createElement('a');
+link.href = 'https://www.inc.com/jeff-haden/this-new-linkedin-study-reveals-top-8-job-interview-questions-and-how-great-job-candidates-answer-them.html';
+link.innerText = 'Source';
+document.body.appendChild(link);
 
-password.onchange = validatePassword;
-confirm_password.onkeyup = validatePassword;
+ paragraph.innerHTML = paragraph.innerHTML
+ .split(/\.[^\.|<]/)
+ .join('.</p><p>' + '</p>');
 
-let input = document.querySelector(".input");
-let button = document.querySelector(".button");
+const wordCount = paragraph.innerText.split(' ').length;
+const wordCountElem = document.createElement('div');
+wordCountElem.innerText = `${wordCount} words`;
+document.body.insertBefore(wordCountElem, paragraph);
 
-button.disabled = true; //setting button state to disabled
-
-function stateHandle() {
-    if (document.querySelector(".input").value === "" && document.getElementById("password").value === "" && document.getElementById("confirm_password").value === "") {
-        button.disabled = true; //button remains disabled
-    } else {
-        button.disabled = false; //button is enabled
-    }
-}
-
-confirm_password.addEventListener("change", stateHandle);
-function myFunction() {
-    alert("You have successfully registered!");
-}
+Array.from(document.querySelectorAll('p'))
+.forEach(p => {
+  p.innerHTML = p.innerHTML
+  .replace(/\?/g, '🤔')
+  .replace(/\!/g, '😲')
+})
