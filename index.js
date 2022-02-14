@@ -1,26 +1,52 @@
-const paragraph = document.querySelector('p');
-paragraph.innerHTML = paragraph.innerText
-.split(' ')
-.map(word => word.length > 8 ? `<span style = "background-color: yellow">${word}</span>` : word)
-.join(' ');
+function terms_changed(termsCheckBox){
+    if(termsCheckBox.checked){
+        document.getElementById("submit_button").disabled = false;
+    } else{
+        document.getElementById("submit_button").disabled = true;
+    }
+}
 
-const link = document.createElement('a');
-link.href = 'https://www.inc.com/jeff-haden/this-new-linkedin-study-reveals-top-8-job-interview-questions-and-how-great-job-candidates-answer-them.html';
-link.innerText = 'Source';
-document.body.appendChild(link);
+const togglePassword = document.querySelector("#togglePassword");
+const password = document.querySelector("#password");
+togglePassword.addEventListener("click", function () {
+            const type = password.getAttribute("type") === "password" ? "text" : "password";
+            password.setAttribute("type", type);
 
- paragraph.innerHTML = paragraph.innerHTML
- .split(/\.[^\.|<]/)
- .join('.</p><p>' + '</p>');
+            this.classList.toggle("bi-eye");
+        });
 
-const wordCount = paragraph.innerText.split(' ').length;
-const wordCountElem = document.createElement('div');
-wordCountElem.innerText = `${wordCount} words`;
-document.body.insertBefore(wordCountElem, paragraph);
+        const form = document.querySelector("form");
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+        });
+        function scrollToTop() {
+                    $(window).scrollTop(0);
+                }
 
-Array.from(document.querySelectorAll('p'))
-.forEach(p => {
-  p.innerHTML = p.innerHTML
-  .replace(/\?/g, '🤔')
-  .replace(/\!/g, '😲')
-})
+$(document).ready(function(){
+    $(".bgBtn").click(function(){
+        var imageUrl = "bg.png";
+        $(".box").css("background-image", "url(" + imageUrl + ")");
+    });
+});
+var maxLength = 15;
+$('textarea').keyup(function() {
+  var textlen = maxLength - $(this).val().length;
+  $('#rchars').text(textlen);
+});
+$( "p:last" ).click(function() {
+  $( this ).fadeTo( "slow", 0.50 );
+});
+$( "#btn1" ).click(function() {
+  $( "#box" ).animate({
+   width: "300px",
+   height: "300px",
+    }, 1500 );
+});
+
+$( "#btn2" ).click(function() {
+  $( "#box" ).animate({
+   width: "100px",
+   height: "100px",
+    }, 1500 );
+});
